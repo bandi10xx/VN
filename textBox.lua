@@ -10,12 +10,12 @@ textBox = {
 
         if type(color) ~= "table" or #color ~= 3 or (type(color[1]) ~= "number" or type(color[2]) ~= "number" or type(color[3]) ~= "number") or (color[1] > 1 or color[2] > 1 or color[3] > 1) then 
             -- I KNOW THIS MAKES YOUR BRAIN WANT TO GO KABOOM BUT BANDI YOU GOT THIS, I REALLY DON'T WANT TO EXPLAIN ALL THESE COMPLICATED CONDITIONS, 
-            --BUT IF SLEEPY 14 YEAR OLD YOU CAN UNDERSTAND THIS THEN >14 YEAR OLD YOU CAN DEFINITELY UNDERSTAND IT TOO!!
+            -- BUT IF SLEEPY 14 YEAR OLD YOU CAN UNDERSTAND THIS THEN >14 YEAR OLD YOU CAN DEFINITELY UNDERSTAND IT TOO!!
             color = {1,1,1}
         end
 
         if type(maxWidth) ~= "number" or maxWidth >= screenWidth * 0.95 or maxWidth <= 500 then
-            maxWidth = math.ceil(textWidth / 2)
+            maxWidth = math.ceil(screenWidth / 2)
             maxWidth = math.min(maxWidth, screenWidth - 100) 
         end -- error handling maxwidth
 
